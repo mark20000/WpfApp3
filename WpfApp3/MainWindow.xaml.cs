@@ -246,7 +246,6 @@ namespace WpfApp3
                 intervalCount = 0;
             }             
                 intervalCount++;
-                timeElapsed = true;
 
             if (content != null)
             {
@@ -264,7 +263,6 @@ namespace WpfApp3
                     cacheKey.Add(content[buttonClick].ToString());
                 }
            
-
                 foreach (var child in KeyPadGrid.Children)
                 {
                     if ((typeof(TextBox) == child.GetType()))
@@ -272,7 +270,6 @@ namespace WpfApp3
                         ((TextBox)child).Text = "";
                         foreach (var letter in cacheKey)
                         {
-
                             ((TextBox)child).Text = ((TextBox)child).Text + letter;
                         }
                     }
